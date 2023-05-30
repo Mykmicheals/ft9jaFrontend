@@ -18,7 +18,11 @@ function Login() {
 
 
   async function loginHandler() {
-    try {
+
+    if (credentials.email === '' || credentials.password === '') {
+      setLoginErr(true)
+    } else {
+       try {
       var formdata = new FormData();
       formdata.append("username", credentials.email);
       formdata.append("password", credentials.password);
@@ -48,6 +52,9 @@ function Login() {
     } catch (error) {
       console.log("error", error);
     }
+    }
+
+   
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -55,6 +62,8 @@ function Login() {
   };
 
   return (
+
+
     <div className="min-h-screen bg-gray-100 flex flex-col justify-center py-12 sm:px-6 lg:px-8 items-center">
       <div className="bg-white p-10 rounded-lg shadow-lg">
         {loginErr && (

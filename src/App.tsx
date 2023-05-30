@@ -2,7 +2,7 @@ import Dashboard from "./pages/Dashboard";
 import HomePage from "./pages/HomePage";
 import { Routes, Route } from "react-router-dom";
 
-// export const appUrl = "http://127.0.0.1:8000";
+ //export const appUrl = "http://127.0.0.1:8000";
 
 export const appUrl = "http://ft9jar.pythonanywhere.com"
 
